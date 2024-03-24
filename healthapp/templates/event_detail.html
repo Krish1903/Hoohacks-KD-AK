@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ event.title }}</h2>
+<p>Date and Time: {{ event.date|date:"Y-m-d H:i" }}</p>
+<p>Location: {{ event.location }}</p>
+<p>Description: {{ event.description }}</p>
+<p>Potential Points Earned: {{ event.point_value}}</p>
+<img src="{{ event.qr_code.url }}" alt="QR Code for {{ event.title }}" />
+{% endblock %}
